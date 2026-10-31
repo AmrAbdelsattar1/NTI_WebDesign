@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.frame {
+  width: 500px;
+  height: 680px;
+  padding: 53px 70px;
+  background-color: #b4bbc0;
+  background-repeat: no-repeat;
+
+}
+
+
+.flip-card {
+  width: 360px;
+  height: 580px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #0b0b0c;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #0b0b0c 88%),
+    url("building.jpg");
+  background-size: 100% 100%, 100% auto;
+  background-position: 0 0, top center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.front-title {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.front-button {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #1a9be6;
+  border-radius: 50%;
+  color: #1a9be6;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: #f4f6f8;
+  transform: rotateY(180deg);
+  padding: 130px 40px 0 40px;
+}
+
+.map-icon {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.back-title {
+  color: #1d3f6e;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 22px;
+  width: 200px;
+}
+
+.back-text {
+  color: #7a8a9c;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.back-footer {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.read-more {
+  color: #1b8ccf;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 28px;
+}
+
+.back-button {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #1b8ccf;
+  border-radius: 50%;
+  color: #1b8ccf;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
